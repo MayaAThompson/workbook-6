@@ -13,5 +13,13 @@ public class FinanceApplication {
         account1.deposit(100);
         ((BankAccount)account2).deposit(100);
 
+        Portfolio portfolio1 = new Portfolio("myPortfolio", "Maya Thompson");
+        portfolio1.add(account1);
+        portfolio1.add(account2);
+
+        Valuable least = portfolio1.getLeastValuable();
+
+        System.out.println(least);
+
     }
 }
