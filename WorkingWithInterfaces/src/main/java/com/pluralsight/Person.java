@@ -17,6 +17,21 @@ public class Person implements Comparable<Person> {
         return (this.lastName + this.firstName).compareTo(p.getLastName() + p.getFirstName());
     }
 
+    @Override
+    public boolean equals(Object otherObject) {
+        if (!(otherObject instanceof Person)) {
+            return false;
+        }
+        else{
+            return this.compareTo((Person) otherObject) == 0;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return (this.lastName + this.firstName).hashCode();
+    }
+
     public String getFirstName() {
         return firstName;
     }
