@@ -19,12 +19,7 @@ public class Person implements Comparable<Person> {
 
     @Override
     public boolean equals(Object otherObject) {
-        if (!(otherObject instanceof Person)) {
-            return false;
-        }
-        else{
-            return this.compareTo((Person) otherObject) == 0;
-        }
+        return otherObject instanceof Person && this.compareTo((Person) otherObject) == 0;
     }
 
     @Override
