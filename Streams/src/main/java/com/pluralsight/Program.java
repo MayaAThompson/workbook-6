@@ -13,8 +13,8 @@ public class Program {
 
         if (!matchedPeople.isEmpty()) {
             System.out.println("Found these people for you:\n");
-            for (Person dude : matchedPeople) {
-                System.out.println(dude.getLastName() +", " + dude.getFirstName());
+            for (Person p : matchedPeople) {
+                System.out.println(p.getLastName() +", " + p.getFirstName());
             }
         }
         else
